@@ -108,5 +108,4 @@ async function shareExperienceRobust() {
     } 
 }
 
-// MEJORA: Ya no se usa openProfileZoom. Se mantiene closeLightbox para compatibilidad del modal general.
 function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
