@@ -1,4 +1,4 @@
-const LORENA_DATA = { titulo: "IA EN AGUASCALIENTES" };
+const LORENA_DATA = { titulo: "CONCURSO IA" };
 
 const CONFIG = { 
     whatsapp: "524491472336", 
@@ -33,7 +33,6 @@ const OTROS_DATA = [
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lorena-title').textContent = LORENA_DATA.titulo;
     document.getElementById('link-yt').href = CONFIG.youtube;
-    document.getElementById('link-fb').href = CONFIG.facebook;
     document.getElementById('link-web').href = CONFIG.sitioWeb;
     document.getElementById('link-wa').href = `https://wa.me/${CONFIG.whatsapp}`;
     
@@ -101,11 +100,9 @@ function playClick() {
 
 async function shareExperienceRobust() { 
     playClick(); 
-    try { await navigator.share({title: 'IA AGUASCALIENTES | ID-CARD', url: window.location.href}); } 
+    try { await navigator.share({title: 'CONCURSO IA | ID-CARD', url: window.location.href}); } 
     catch(e) { 
         navigator.clipboard.writeText(window.location.href);
         alert("¡Enlace copiado!"); 
     } 
 }
-
-function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }

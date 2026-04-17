@@ -7,7 +7,6 @@
     --shadow-premium: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* RESET GENERAL - MEJORA: Liberación total para Scroll */
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
 body { 
@@ -15,10 +14,10 @@ body {
     font-family: 'Montserrat', sans-serif; 
     color: var(--text-white); 
     overflow-x: hidden; 
-    overflow-y: auto; /* Permite el scroll vertical siempre que sea necesario */
+    overflow-y: auto; 
     width: 100%; 
     min-height: 100vh;
-    display: block; /* Cambiado de flex a block para permitir flujo natural hacia abajo */
+    display: block; 
 }
 
 .silver-shine {
@@ -31,14 +30,13 @@ body {
     100% { filter: brightness(1) drop-shadow(0 0 5px white); }
 }
 
-/* HUB PRINCIPAL - MEJORA: Altura mínima y espaciado inferior */
 .main-hub { 
     min-height: 100vh; 
     width: 100%;
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    padding: 30px 20px 80px 20px; /* Aumentamos el padding inferior (80px) */
+    padding: 30px 20px 80px 20px; 
     background: radial-gradient(circle at center, #00509B 0%, #002e59 100%); 
 }
 
@@ -48,7 +46,6 @@ body {
 .agency-name { color: white; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.1; }
 .agency-slogan { color: var(--text-muted); font-size: 0.6rem; font-style: italic; margin-top: 4px; }
 
-/* USER CARD */
 .user-card { background: white; padding: 12px; border-radius: 20px; border: 4px solid #FFFFFF; text-align: center; width: 100%; max-width: 290px; position: relative; box-shadow: var(--shadow-premium); }
 .vip-client-name { font-family: 'Orbitron', sans-serif; color: var(--brand-ink); font-size: 1.3rem; margin-bottom: 8px; font-weight: 900; }
 .main-photo-wrapper { position: relative; cursor: pointer; border-radius: 12px; overflow: hidden; height: 280px; background: #f0f0f0; }
@@ -57,45 +54,54 @@ body {
 
 .btn-share-passionate { background: linear-gradient(135deg, #00509B 0%, #007bff 100%); color: white; border: 2px solid white; padding: 14px 20px; border-radius: 50px; font-weight: 900; font-size: 0.7rem; margin-top: 20px; cursor: pointer; text-transform: uppercase; font-family: 'Orbitron'; }
 
-/* MENU RÁPIDO */
 .quick-access-menu { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; max-width: 360px; margin-top: 25px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(10px); }
 .menu-item { background: none; border: none; color: var(--text-white); display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; }
 .menu-item i { background: white; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border-radius: 50%; color: var(--brand-ink); }
 .menu-item span { font-size: 0.45rem; font-weight: 800; text-transform: uppercase; text-align: center; line-height: 1.1; }
 
-/* REDES SOCIALES */
 .social-contact-wrapper { width: 100%; max-width: 360px; margin-top: 40px; text-align: center; padding-bottom: 40px; }
 .social-title { display: block; color: white; font-family: 'Orbitron'; font-weight: 800; font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; }
 .social-contact-hub { display: flex; justify-content: center; align-items: center; gap: 15px; }
 .social-btn { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
 
 .yt-style i { color: #FF0000; }
-.fb-style i { color: #1877F2; }
-.web-style i { color: #00509B; }
 .wa-style i { color: #25D366; }
+.web-style i { color: #00509B; }
 
-/* CAPA DE CONTENIDO (PANELES) */
+/* CAPA DE CONTENIDO */
 .content-overlay { position: fixed; inset: 0; background: rgba(0,46,89,0.98); z-index: 1000; display: flex; flex-direction: column; align-items: center; padding: 70px 15px 20px 15px; backdrop-filter: blur(15px); overflow-y: auto; }
 .btn-close-overlay { position: absolute; top: 15px; right: 15px; background: white; color: var(--brand-ink); width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; border: none; font-weight: 900; }
 
 .tab-pane { width: 100%; display: flex; flex-direction: column; align-items: center; }
-.pane-title { font-family: 'Orbitron'; color: white; font-size: 1.1rem; margin-bottom: 20px; text-align: center; width: 100%; padding: 10px; border-bottom: 2px solid rgba(255,255,255,0.3); order: -1; }
+.pane-title { font-family: 'Orbitron'; color: white; font-size: 1.1rem; margin-bottom: 20px; text-align: center; width: 100%; padding: 10px; border-bottom: 2px solid rgba(255,255,255,0.3); }
 
-/* GRID GALERÍA */
-.premium-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 340px; }
-.premium-photo-item { background: white; padding: 4px; border-radius: 12px; border: 3px solid white; height: 150px; overflow: hidden; cursor: pointer; }
-.premium-photo-item img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block; border-radius: 8px; }
+/* ESTILOS DEL FORMULARIO DE CONCURSO */
+.concurso-form-container { width: 100%; max-width: 350px; padding-bottom: 50px; }
+.form-group-box { background: rgba(255,255,255,0.1); border-radius: 15px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); }
+.input-label { display: block; font-size: 0.65rem; font-weight: 800; color: #7ab8ff; margin-bottom: 5px; text-transform: uppercase; font-family: 'Orbitron'; }
+.input-field { width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 12px; font-family: 'Montserrat'; font-size: 0.85rem; background: white; color: #333; }
+.tutor-section { border-left: 4px solid #25D366; }
 
-/* MODAL MARKETING */
+.legal-contract-box { background: white; border-radius: 12px; padding: 15px; color: #333; font-size: 0.7rem; line-height: 1.4; margin-bottom: 20px; text-align: justify; }
+.legal-text { margin-bottom: 15px; }
+.checkbox-container { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 0.65rem; color: #00509B; cursor: pointer; }
+
+.btn-send-concurso { width: 100%; padding: 15px; border-radius: 50px; border: 2px solid white; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; font-family: 'Orbitron'; font-weight: 800; font-size: 0.85rem; cursor: pointer; }
+
+/* MODAL Y OTROS */
+.premium-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 340px; margin-bottom: 30px; }
+.premium-photo-item { background: white; padding: 4px; border-radius: 12px; border: 3px solid white; height: 150px; overflow: hidden; }
+.premium-photo-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+
 .overlay-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 5000; padding: 20px; backdrop-filter: blur(10px); }
-.modal-card-premium { background: white; padding: 30px 15px; border-radius: 30px; width: 100%; max-width: 320px; text-align: center; border: 6px solid var(--brand-ink); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
-.btn-close-modal { position: absolute; top: -15px; right: -15px; background: var(--brand-ink); color: white; width: 40px; height: 40px; border-radius: 50%; border: 3px solid white; font-size: 1.5rem; cursor: pointer; }
+.modal-card-premium { background: white; padding: 30px 15px; border-radius: 30px; width: 100%; max-width: 320px; text-align: center; border: 6px solid var(--brand-ink); position: relative; }
+.btn-close-modal { position: absolute; top: -15px; right: -15px; background: var(--brand-ink); color: white; width: 40px; height: 40px; border-radius: 50%; border: 3px solid white; font-size: 1.5rem; }
 
-.info-bar-primary { background: var(--brand-ink); color: white; padding: 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 800; font-family: 'Orbitron'; margin-bottom: 15px; line-height: 1.4; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.info-bar-primary { background: var(--brand-ink); color: white; padding: 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 800; font-family: 'Orbitron'; margin-bottom: 15px; }
 .info-bar-secondary { background: #f4f7fa; color: #333; padding: 15px; border-radius: 15px; border-left: 6px solid var(--brand-ink); text-align: left; }
-.contact-item-row { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; cursor: pointer; color: #333; }
-.contact-item-row i { color: var(--brand-ink); font-size: 1.2rem; min-width: 25px; text-align: center; }
+.contact-item-row { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; color: #333; }
+.contact-item-row i { color: var(--brand-ink); }
 
-.btn-whatsapp-direct { background: #25D366; color: white; padding: 16px; border-radius: 50px; text-decoration: none; font-weight: 900; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid white; box-shadow: 0 5px 15px rgba(37,211,102,0.4); }
+.btn-whatsapp-direct { background: #25D366; color: white; padding: 16px; border-radius: 50px; text-decoration: none; font-weight: 900; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid white; }
 
 .credits-altpro { margin-top: 25px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.6rem; color: var(--text-muted); }
